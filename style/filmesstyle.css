@@ -19,24 +19,33 @@ body{
   }
   
   #logo {
-    position: absolute;
-    width: 200px;
+    /* position: absolute; */
+    
+    width: 80px;
+    height: 80px;
   }
-  
   img{
     width: 20px;
   }
   
-  .navbar{
+  #navbar-content{
     display: flex;
     justify-content: center;
+    gap: 15px;
+    align-items: center;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .navbar{
+    display: flex;
+    justify-content: space-between;
     gap: 15px;
     align-items: center;
     background: #9b214a8c;
     height: 50px;
     font-size: 30px;
   }
-  
   .icons{
     width: 35px;
   }
