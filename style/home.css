@@ -1,29 +1,174 @@
-*{
+* {
   margin: 0px;
-font-family: 'Bebas Neue', sans-serif;}
-
-.main{
-  background: #21000f;
-  width: 100%;
-  
+  font-family: 'Bebas Neue', sans-serif;
 }
 
-.topo {
-  height: 200px;
+.main {
+  background: #21000f;
+  width: 100%;
 }
 
 #logo {
+  /* position: absolute; */
+  width: 80px;
+  height: 80px;
+}
+
+#banner-top3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 500px;
+  color: white;
+  gap: 50px;
+}
+.titulotop3 {
+  padding-left: 55px;
+}
+
+.imagem-numerada img {
+  z-index: 2;
+  margin-left: 55px;
+  margin-top: 55px;
+}
+
+.imagem-numerada h1 {
   position: absolute;
+  font-size: 200px;
+  z-index: 1;
+}
+
+.imagem-numerada {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#srecentes {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+#banner-seriesrecentes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 500px;
+  color: white;
+  gap: 30px;
+  border-top: solid white;
+}
+.seriesrecente img {
+  height: 100px;
   width: 200px;
 }
 
-img{
+#recentes {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+#banner-filmesrecentes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 500px;
+  color: white;
+  gap: 30px;
+  border-top: solid white;
+}
+
+.filmerecente img {
+  height: 100px;
+  width: 200px;
+}
+
+.topfilme img {
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.topfilme {
+  height: 400px;
+}
+
+.sinopse-titulo p {
+  max-width: 450px;
+}
+
+.sinopse-titulo h1 {
+  font-size: 50px;
+}
+
+.sinopse-titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 200px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5130427170868348) 0%,
+    rgba(0, 0, 0, 0.5130427170868348) 100%
+  );
+}
+
+#banner-destaque {
+  height: 400px;
+  width: 100%;
+  background-image: url('https://image.tmdb.org/t/p/original/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.Filme-destaque {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5130427170868348) 0%,
+    rgba(0, 0, 0, 0.5130427170868348) 100%
+  );
+}
+
+.Filme-destaque img {
+  width: 200px;
+  height: 300px;
+  padding-top: 30px;
+}
+
+img {
   width: 20px;
 }
 
-.navbar{
+#navbar-content {
   display: flex;
   justify-content: center;
+  gap: 15px;
+  align-items: center;
+  height: 50px;
+  font-size: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
   gap: 15px;
   align-items: center;
   background: #9b214a8c;
@@ -31,37 +176,34 @@ img{
   font-size: 30px;
 }
 
-.icons{
+.icons {
   width: 35px;
 }
 
-.butão{
+.butão {
   width: 25px;
   height: 24px;
-
 }
 
 .pesquisa {
   width: 200px;
   height: 20px;
-
 }
 
-a{
+a {
   text-decoration: none;
   color: #c5b89f;
 }
 
 footer {
-  background-color: #333; 
-  color: #fff; 
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  padding: 10px 0; 
+  padding: 10px 0;
 }
 
-
 footer a {
-  color: #fff; 
-  text-decoration: none; 
-  font-weight: bold; 
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
