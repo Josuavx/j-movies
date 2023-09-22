@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/filmemodelo.css">
-    <title>Filme na Netflix</title>
+    <title>Filme</title>
 </head>
 <body>
-    
-    <div class="navbar">
-        <img id="logo" src="../Gold_Premium_Letter_J_logo_Template__1_-removebg-preview.png" alt="kkk">
-        <div id="navbar-content">
-          <img class="icons" id="home" src="../svg/home_circle_icon_137496.svg" alt=""> <a >Home</a>
-          <img class="icons"src=" ../svg/movies_and_tv_filled_icon_202065.svg" alt=""> <a href="todososfilmes.html">Filmes</a>
-          <img class="icons" src="../svg/-local-movies_90506.svg" alt=""> <a href="todasasseries.html">Séries</a>
-          <input class="pesquisa" type="pesquisar"> <button class="butão" type=""> </button> </input>
-        </div>
-      </div>
+  <header>
+    <div class="logo">
+      <a href="./index.html">
+        <img src="/Gold_Premium_Letter_J_logo_Template__1_-removebg-preview.png" alt="Logo">
+      </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/src/index.html">HOME</a></li>
+            <li><a href="/src/todasasseries.html">SÉRIES</a></li>
+            <li><a href="/src/todososfilmes.html">FILMES</a></li>
+            <input type="Pesquise">
+        </ul>
+    </nav>
+</header>
 
     <section class="movie-details">
         <div class="movie-poster">
-            <img src="/img/download (1).jpg" alt="Nome do Filme">
+            <img id="imagemSelecionada" alt="Nome do Filme">
         </div>
         <div class="movie-info">
-            <h1>Jurassick Word</h1>
-            <p class="movie-genre">Gênero: Ação, Aventura, Ficção Científica</p>
-            <p class="movie-rating">Elenco: Bryce Dallas, Howard Claire Dearing , Chris Pratt
-            </p>
-            <p class="movie-rating">Diretor: Colin Trevorrow</p>
+            <h1 id="titulo"></h1>
+            <p class="movie-genre">Duração: <span id="duracao"></span></p>
+            <p class="movie-rating">Elenco: <span id="elenco"></span></p>
+            <p class="movie-rating">Diretor: <span id="diretor"></span></p>
             <button class="play-button">FILME</button>
-            <p class="movie-description">Sinopse: O Parque dos Dinossauros está aberto para visitação, e o público tem a chance de ver de perto as mais diversas espécies. Porém, um desses animais, resultado de experiência genética, desenvolve alta inteligência e se torna uma ameaça para todos.</p>
+            <p class="movie-description">Sinopse: <span id="sinopse"></span></p>
            
         </div>
 
@@ -62,3 +66,47 @@
   
 </body>
 </html>
+
+<script>
+    // Função para obter o valor do parâmetro da URL
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+  
+    // Obtenha os valores dos parâmetros da URL
+    var imagemSelecionada = getParameterByName('imagem');
+    var titulo = getParameterByName('titulo');
+    var duracao = getParameterByName('duracao');
+    var elenco = getParameterByName('elenco');
+    var diretor = getParameterByName('diretor');
+    var sinopse = getParameterByName('sinopse');
+    
+    // Verifique se a imagemSelecionada não está vazia
+    if (imagemSelecionada) {
+      // Selecione o elemento img pelo ID
+      var imagemElement = document.getElementById('imagemSelecionada');
+      
+      // Defina a src da imagem com a imagemSelecionada
+      imagemElement.src = imagemSelecionada;
+      
+      // Selecione elementos para exibir título, gênero, elenco, diretor e sinopse
+      var tituloElement = document.getElementById('titulo');
+      var duracaoElement = document.getElementById('duracao');
+      var elencoElement = document.getElementById('elenco');
+      var diretorElement = document.getElementById('diretor');
+      var sinopseElement = document.getElementById('sinopse');
+  
+      // Defina o conteúdo dos elementos com os valores dos parâmetros
+      tituloElement.innerText = titulo;
+      duracaoElement.innerText = duracao;
+      elencoElement.innerText = elenco;
+      diretorElement.innerText = diretor;
+      sinopseElement.innerText = sinopse;
+    }
+  </script>

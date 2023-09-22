@@ -2,14 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
-
 }
 
 body, h1, p, ul, li, button {
     margin: 0;
     padding: 0;
-    
 }
 
 
@@ -17,30 +14,18 @@ body {
     background-color: #000;
     font-family: 'Bebas Neue', sans-serif;; 
     color: #fff;
+    width: 100%;
 }
 
-#navbar-content{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-    height: 50px;
-    font-size: 30px;
-  }
+header {
 
-  .navbar{
     display: flex;
     justify-content: space-between;
-    gap: 15px;
     align-items: center;
-    background: #9b214a8c;
-    height: 50px;
-    font-size: 30px;
-  }
-  .icons{
-    width: 35px;
-  }
-
+    padding: -1px 0px;
+    background-color: #9b214a8c;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
 .logo img {
     width: 100px;
@@ -158,12 +143,17 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+.comments h2 {
+    margin-left: 20px;
+}
+
 .comment-form form {
     margin-top: 10px;
 }
 
 .form-group {
     margin-bottom: 10px;
+    max-width: 100%;
 }
 
 .form-group label {
@@ -176,14 +166,14 @@ nav ul li a:hover {
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     background-color: #333;
     color: #fff;
-    margin: 10px;
+    margin: 10px 0px 0px 10px;
 }
 
 button {

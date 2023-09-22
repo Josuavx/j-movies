@@ -1,15 +1,14 @@
 *{
   margin: 0px;
   font-family: 'Bebas Neue', sans-serif;
-    
 }
-  
+
 body{
-    background-color: #9b214a8c;
+  background-color: #292425;
 }
 
 .main{
-  background: #21000f;
+  background: #292425;
   width: 100%;
   
 }
@@ -19,24 +18,34 @@ body{
 }
 
 #logo {
-  position: absolute;
-  width: 200px;
+  /* position: absolute; */
+  
+  width: 80px;
+  height: 80px;
 }
-
 img{
   width: 20px;
 }
 
-.navbar{
+#navbar-content{
   display: flex;
   justify-content: center;
+  gap: 15px;
+  align-items: center;
+  height: 50px;
+  font-size: 30px;
+  margin-right: 80px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
   gap: 15px;
   align-items: center;
   background: #9b214a8c;
   height: 50px;
   font-size: 30px;
 }
-
 .icons{
   width: 35px;
 }
@@ -44,6 +53,7 @@ img{
 .butão{
   width: 25px;
   height: 24px;
+
 }
 
 .pesquisa {
@@ -60,51 +70,66 @@ a{
 ------------------------------------------
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 header {
-    background-color: #111;
-    padding: 1rem 0;
+  background-color: #111;
+  padding: 1rem 0;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
 }
 
 .logo {
-    width: 100px;
+  width: 100px;
 }
 
 
 .serie-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
+/* .serie {
+  width: calc(25% - 1rem); 
+  margin-bottom: 1rem; 
+} */
+
 .serie {
-    width: calc(25% - 1rem);
-    margin-bottom: 1rem;
+color: white;
+width: calc(25% - 1rem);
+margin-bottom: 1rem;
+background: #38041b;
+display: flex;
+flex-direction: column; /* Para empilhar os elementos verticalmente */
+align-items: center; /* Para centralizar horizontalmente */
+text-align: center; /* Para centralizar o texto horizontalmente */
+}
+
+.serie h3{
+margin-top: 15px;
 }
 
 
 .serie img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .serie img{
-    align-items: center;
-    margin-top: 20px;
+  align-items: center;
+  margin-top: 20px;
 }
 
 footer {
@@ -114,8 +139,11 @@ footer {
   padding: 10px 0; 
 }
 
+
 footer a {
   color: #fff; 
   text-decoration: none; 
   font-weight: bold; 
 }
+
+
